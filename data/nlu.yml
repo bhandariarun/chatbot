@@ -1,0 +1,37 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+
+- intent: thanks
+  examples: |
+    - thanks
+    - thank you
+    - appreciate it
+    - many thanks
+
+- intent: check_balance
+  examples: |
+    -How many balance do you have
+    -Show me the balance
+
+
+- intent: balance_history
+  examples: |
+    -Show me the balance history
+    -Can you please send me the balance history

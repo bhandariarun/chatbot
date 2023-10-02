@@ -1,0 +1,54 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - thanks
+  - check_balance
+  - balance_history
+
+entities:
+  - entity_address
+
+slots:
+  destination:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: entity_address
+      intent: balance_history
+
+entity:
+  - entity_name
+
+slot:
+  destination:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: entity_name
+      intent: check_balance
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_thanks:
+    - text: "You are welcome,it was my pleasure to assist you"
+
+  utter_check_balance:
+    - text: "Your balance have 1000000"
+
+  utter_balance_history:
+    - text: "Your balance history is Name: Palm Mind  Account Number: 12345675468932  Balance=600000"
+
+actions:
+  - action_check_balance_entity
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

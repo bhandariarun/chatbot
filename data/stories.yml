@@ -1,0 +1,25 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: Express Thanks
+  steps:
+    - intent: thanks
+    - action: utter_thanks
+
+- story: Check balance
+  steps:
+    - intent: check_balance
+    - action: utter_check_balance
+
+
+- story: Balance Histroy
+  steps:
+    - intent: balance_history
+    - action: utter_balance_history
+
